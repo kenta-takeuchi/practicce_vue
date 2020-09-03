@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+<div id="app1">
+    <p>{{ message }}</p>
+</div>
+
+<div id="app2">
+    <p>{{ message }}</p>
+</div>
+
+
+<script>
+    new Vue({
+        el: '#app1',
+        data: {
+            message: 'インスタンス1'
+        }
+    })
+    new Vue({
+        el: '#app2',
+        data: {
+            message: 'インスタンス2'
+        }
+    })
+</script>
+
+</body>
+</html>
