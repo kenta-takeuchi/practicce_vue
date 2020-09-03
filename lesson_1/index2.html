@@ -14,6 +14,7 @@
     <button v-on:click="countUp">カウントアップ</button>
     <p v-on:mousemove="changeMousePosition">マウスを載せてください</p>
     <p>X: {{x}}, Y: {{y}}</p>
+    <input type="text" v-on:keyup.enter="myAlert">
 </div>
 
 
@@ -32,6 +33,9 @@
             changeMousePosition: function (event) {
                 this.x = event.clientX;
                 this.y = event.clientY;
+            },
+            myAlert() {
+                alert('アラート');
             }
         }
     })
